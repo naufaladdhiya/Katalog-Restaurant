@@ -1,0 +1,66 @@
+@media only screen and (max-width: 699px) {
+  .nav-container {
+    display: block;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav__menu ul {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header_menu {
+    font-size: 20px;
+    display: block;
+    width: 30px;
+    margin-right: 10px;
+  }
+  .nav__menu {
+    justify-content: start;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  .main-resto_container {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .header_menu {
+    display: none;
+  }
+  section {
+    margin-bottom: 80px;
+  }
+
+  .main-resto_label {
+    font-size: 26px;
+  }
+
+  .list-resto {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resto-item_name {
+    font-size: 22px;
+  }
+  .main-resto_container {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  nav {
+    padding: 0 100px;
+  }
+  .main-resto_container {
+    padding: 0 100px;
+  }
+  .list-resto {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
