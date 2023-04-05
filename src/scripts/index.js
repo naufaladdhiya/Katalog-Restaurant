@@ -6,23 +6,23 @@ import DATA from '../DATA.json';
 const hamburger = document.querySelector('#menu');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#navmenu');
-const hero = document.querySelector('#hero')
+const hero = document.querySelector('#hero');
 
-hamburger.addEventListener('click', function (event) {
+hamburger.addEventListener('click', (event) => {
   if (drawer.style.maxHeight) {
     drawer.style.maxHeight = null;
   } else {
-    drawer.style.maxHeight = drawer.scrollHeight + 'px';
+    drawer.style.maxHeight = `${drawer.scrollHeight}px`;
   }
   event.stopPropagation();
 });
 
-main.addEventListener('click', function (event) {
+main.addEventListener('click', (event) => {
   drawer.style.maxHeight = null;
   event.stopPropagation();
 });
 
-hero.addEventListener('click', function (event) {
+hero.addEventListener('click', (event) => {
   hero.style.maxHeight = null;
   event.stopPropagation();
 });

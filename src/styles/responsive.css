@@ -25,7 +25,14 @@
     transition: max-height 0.4s ease-in-out;
   }
   .main-resto_container {
-    padding: 0 20px;
+    padding: 25px 20px;
+  }
+  .hero-container .hero-content-container {
+    text-align: left;
+    line-height: 1.5em;
+  }
+  .skip2content {
+    display: none;
   }
 }
 
