@@ -7,6 +7,7 @@ const hamburger = document.querySelector('#menu');
 const main = document.querySelector('main');
 const drawer = document.querySelector('#navmenu');
 const hero = document.querySelector('#hero');
+const nav = document.getElementById('navcontainer');
 
 hamburger.addEventListener('click', (event) => {
   if (drawer.style.maxHeight) {
@@ -22,8 +23,13 @@ main.addEventListener('click', (event) => {
   event.stopPropagation();
 });
 
+nav.addEventListener('click', (event) => {
+  drawer.style.maxHeight = null;
+  event.stopPropagation();
+});
+
 hero.addEventListener('click', (event) => {
-  hero.style.maxHeight = null;
+  drawer.style.maxHeight = null;
   event.stopPropagation();
 });
 
