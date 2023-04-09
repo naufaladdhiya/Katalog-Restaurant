@@ -40,6 +40,9 @@
   .header_menu {
     display: none;
   }
+  main {
+    padding: 0 30px;
+  }
   section {
     margin-bottom: 80px;
   }
@@ -69,5 +72,23 @@
   }
   .list-resto {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container-info {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 1.5em;
+    margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .restaurant-detail__info,
+  .restaurant-detail__menu-list,
+  .restaurant-detail__review {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    gap: 50px;
+    margin: 0 auto;
   }
 }
