@@ -40,7 +40,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
       </li>
     
       <li class="resto-address">
-        <i title="address"></i>
+      <i class="fa fa-building"></i>
         <p class="detail-name-address-rating">${restaurant.address}, ${
   restaurant.city
 }</p>
@@ -111,5 +111,21 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </div>
 </div>
 `;
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this restaurants" id="likeButton" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+const createUnlikeButtonTemplate = () => `
+  <button aria-label="unlike this restaurants" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createLikeButtonTemplate,
+  createUnlikeButtonTemplate,
+};

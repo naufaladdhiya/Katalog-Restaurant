@@ -40,9 +40,6 @@
   .header_menu {
     display: none;
   }
-  main {
-    padding: 0 30px;
-  }
   section {
     margin-bottom: 80px;
   }
@@ -90,5 +87,13 @@
     grid-template-columns: repeat(1, minmax(300px, 1fr));
     gap: 50px;
     margin: 0 auto;
+  }
+  .detail-review {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .resto-item_image-container {
+    max-width: 300px;
   }
 }

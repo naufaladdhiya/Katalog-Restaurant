@@ -153,7 +153,7 @@ h4 {
 }
 
 .main-resto_container {
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 .main-resto_label {
@@ -237,14 +237,16 @@ h4 {
 }
 
 .resto-item_desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
   font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 16px;
+  margin: 16px 15px;
   font-size: 14px;
   line-height: 1.5em;
   color: black;
-  padding: 0 16px 15px 16px;
 }
 
 /* Footer */
@@ -299,7 +301,7 @@ footer {
 }
 
 .restaurant-detail__foods > li,
-.restaurant-detail__drinks > li{
+.restaurant-detail__drinks > li {
   list-style: none;
   margin: 10px 15px;
   padding: 1px;
@@ -319,6 +321,7 @@ footer {
   grid-gap: 1.545em;
   font-size: 1em;
   margin-top: 1em;
+  text-align: center;
 }
 
 .detail-img {
@@ -366,12 +369,18 @@ footer {
   margin-bottom: 0;
 }
 
-.restaurant-item__not__found{
+.restaurant-item__not__found {
   margin-top: 30px;
 }
 
 .resto-item_image-container {
   max-width: 600px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .detail-info h4 {
@@ -402,12 +411,6 @@ footer {
 }
 
 /*explore restaurant label */
-.main-resto_container {
-  width: 100%;
-  margin: 60px auto;
-  padding: 0 3%;
-  text-align: center;
-}
 
 .explore-restaurant__label {
   font-size: 32px;
@@ -500,6 +503,9 @@ form {
 
 /* Detail Review */
 .detail-review {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   max-width: 100%;
   font-size: 1em;
   text-align: center;
@@ -509,13 +515,9 @@ form {
   color: var(--secondary-color);
   background-color: var(--third-color);
   margin-bottom: 1.5em;
-  padding: 1em 1em;
-  border: 1px solid var(--secondary-color);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 2em;
-}
-
-.detail-review-item:last-child {
-  margin-bottom: 0;
 }
 
 .header-review {
