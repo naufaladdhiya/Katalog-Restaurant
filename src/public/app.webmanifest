@@ -1,0 +1,10 @@
+{
+    "id": "dapur-Mama-lite-pwa-1",
+    "start_url": "./index.html",
+    "name": "dapur-Mama",
+    "short_name": "dapur-Mama",
+    "description": "Temukan restoran favorite disekitar kamu dengan cepat dan mudah",
+    "display": "standalone",
+    "background_color": "#576CBC",
+    "theme_color": "#576CBC"  
+}
