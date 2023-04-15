@@ -29,7 +29,7 @@ a {
 .skip2content {
   background-color: var(--secondary-color);
   border-radius: 4px;
-  color: var(--primary-color);
+  color: var(--third-color);
   font-weight: 500;
   left: 0;
   line-height: 44px;
@@ -100,12 +100,12 @@ nav {
 .nav__menu a {
   text-decoration: none;
   font-size: 16px;
-  padding: 0.7rem;
+  padding: 0.9rem;
 }
 
-.nav__menu ul li a:hover {
+.nav__menu ul li:hover {
   color: var(--secondary-color);
-  background-color: ghostwhite;
+  text-decoration: underline;
 }
 
 /* hero */
@@ -371,6 +371,7 @@ footer {
 
 .restaurant-item__not__found {
   margin-top: 30px;
+  text-align: center;
 }
 
 .resto-item_image-container {

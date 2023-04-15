@@ -29,6 +29,17 @@ const Favorite = {
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+
+    const skipLinkElem = document.querySelector('.skip2content');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      const mainContentElem = document.querySelector('#mainContent');
+      if (mainContentElem) {
+        setTimeout(() => {
+          mainContentElem.focus();
+        }, 10);
+      }
+    });
   },
 };
 

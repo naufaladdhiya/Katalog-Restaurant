@@ -3,6 +3,7 @@ import UrlParser from '../../routes/url-parser';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
 import FavoriteRestaurantIdb from '../../data/favorite-resto-idb';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import PostReview from '../../utils/post-review';
 
 const Detail = {
   async render() {
@@ -51,6 +52,23 @@ const Detail = {
         description: restaurant.restaurant.description,
         rating: restaurant.restaurant.rating,
       },
+    });
+
+    const submitReview = document.getElementById('submit-review');
+    submitReview.addEventListener('click', (event) => {
+      event.preventDefault();
+      PostReview();
+    });
+
+    const skipLinkElem = document.querySelector('.skip2content');
+    skipLinkElem.addEventListener('click', (event) => {
+      event.preventDefault();
+      const mainContentElem = document.querySelector('#mainContent');
+      if (mainContentElem) {
+        setTimeout(() => {
+          mainContentElem.focus();
+        }, 10);
+      }
     });
   },
 };
