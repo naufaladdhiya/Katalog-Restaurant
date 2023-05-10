@@ -35,11 +35,9 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantSource.restaurantDetail(url.id);
     const restaurantContainer = document.querySelector('#detail-rest');
-    const hero = document.querySelector('#hero');
     restaurantContainer.innerHTML = createRestaurantDetailTemplate(
       restaurant.restaurant,
     );
-    hero.style.display = 'none';
 
     LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),

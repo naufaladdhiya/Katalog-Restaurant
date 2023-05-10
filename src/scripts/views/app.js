@@ -26,11 +26,17 @@ class App {
     await page.afterRender();
     const mainContent = document.querySelector('#mainContent');
     const skipLink = document.querySelector('.skip2content');
+    const hero = document.querySelector('#hero');
     skipLink.addEventListener('click', (e) => {
       e.preventDefault();
       mainContent.scrollIntoView({ behavior: 'smooth' });
       skipLink.blur();
     });
+    if (url !== '/') {
+      hero.style.display = 'none';
+    } else {
+      hero.style.display = 'block';
+    }
   }
 }
 

@@ -4,7 +4,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 <article tabindex="0" class="resto-item">
   <a href="/#/detail/${restaurant.id}">
     <div class="resto-item_content">
-    <img class="resto-item_image " src="${
+    <img class="resto-item_image lazyload" data-src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="Gambar ${restaurant.name}" tabindex="0"/>
       <p tabindex="0" class="resto-item_city" alt="kota restoran">${
@@ -29,7 +29,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 <div class="detail">
   <div tabindex="0" class="container-info">
     <div class="img-container">
-    <img class="resto-item_image-container " src="${
+    <img class="resto-item_image-container lazyload" data-src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="Gambar ${restaurant.name}" tabindex="0"/>
     </div>
