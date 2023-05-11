@@ -9,7 +9,7 @@ Before(({ I }) => {
 });
 
 Scenario('Post resto review', async ({ I }) => {
-  const reviewText = 'kun kab';
+  const reviewText = 'testing';
 
   I.seeElement('.resto-item_content');
   I.click(locate('.resto-item_content').first());
@@ -19,7 +19,6 @@ Scenario('Post resto review', async ({ I }) => {
   I.fillField('inputReview', reviewText);
   I.click('#submit-review');
 
-  I.waitForResponse('https://restaurant-api.dicoding.dev/review');
   const lastReview = locate('.body-review').last();
   const lastReviewText = await I.grabTextFrom(lastReview);
   assert.strictEqual(reviewText, lastReviewText.trim());
