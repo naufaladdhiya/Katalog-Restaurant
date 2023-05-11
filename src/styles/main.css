@@ -113,7 +113,7 @@ nav {
 .hero-container {
   min-height: 380px;
   position: relative;
-  background: url('../public/images/sharp/hero-image_4-large.jpg');
+  background-image: url('../public/images/sharp/hero-image_4-large.jpg');
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;

@@ -6,8 +6,7 @@ const assert = require('assert');
 Feature('Liking Restaurants');
 
 Before(({ I }) => {
-  pause();
-  I.amOnPage('/#/favorite');
+  I.amOnPage('#/favorite');
 });
 
 Scenario('showing empty liked restaurants', ({ I }) => {
@@ -24,22 +23,27 @@ Scenario('liking one restaurant', async ({ I }) => {
     '.restaurant-item__not__found',
   );
 
-  I.amOnPage('/');
+  I.amOnPage('/#');
 
+  I.waitForElement('.resto-item_name', 10);
   I.seeElement('.resto-item_name');
 
   const firstRestaurant = locate('.resto-item_name').first();
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
+  I.waitForElement('#likeButton', 5);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/#/favorite');
+  I.amOnPage('#/favorite');
+  I.waitForElement('.resto-item', 10);
   I.seeElement('.resto-item');
 
   const likedRestaurantName = await I.grabTextFrom('.resto-item_name');
   assert.strictEqual(firstRestaurantName, likedRestaurantName);
+
+  I.seeElement('.resto-item_name');
 });
 
 Scenario('unlike one restaurants', async ({ I }) => {
@@ -48,18 +52,21 @@ Scenario('unlike one restaurants', async ({ I }) => {
     '.restaurant-item__not__found',
   );
 
-  I.amOnPage('/');
+  I.amOnPage('/#');
 
+  I.waitForElement('.resto-item_name', 10);
   I.seeElement('.resto-item_name');
 
   const firstRestaurant = locate('.resto-item_name').first();
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
+  I.waitForElement('#likeButton', 5);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/#/favorite');
+  I.amOnPage('#/favorite');
+  I.waitForElement('.resto-item', 10);
   I.seeElement('.resto-item');
 
   const likedRestaurantName = await I.grabTextFrom('.resto-item_name');
@@ -70,10 +77,12 @@ Scenario('unlike one restaurants', async ({ I }) => {
   const firstRestaurantLiked = locate('.resto-item_name').first();
   I.click(firstRestaurantLiked);
 
+  I.waitForElement('#likeButton', 5);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
-  I.amOnPage('/#/favorite');
+  I.amOnPage('#/favorite');
+  I.waitForElement('.restaurant-item__not__found', 10);
   I.see(
     'Tidak ada favorite restaurant yang ditampilkan',
     '.restaurant-item__not__found',

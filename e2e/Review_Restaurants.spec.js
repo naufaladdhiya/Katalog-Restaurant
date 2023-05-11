@@ -4,14 +4,15 @@ const assert = require('assert');
 Feature('Review Restaurant');
 
 Before(({ I }) => {
-  pause();
   I.amOnPage('/');
 });
 
 Scenario('Post resto review', async ({ I }) => {
   const reviewText = 'testing';
 
+  I.waitForElement('.resto-item_content', 10);
   I.seeElement('.resto-item_content');
+
   I.click(locate('.resto-item_content').first());
 
   I.seeElement('.form-review form');
